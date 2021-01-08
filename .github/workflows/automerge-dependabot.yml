@@ -18,7 +18,6 @@ jobs:
     steps:
       - name: Automerge Dependabot
         uses: pascalgn/automerge-action@v0.12.0
-        if: steps.waitforstatuschecks.outputs.status == 'success'
         env:
           MERGE_METHOD: "squash"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
