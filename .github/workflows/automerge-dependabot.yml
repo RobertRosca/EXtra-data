@@ -8,7 +8,6 @@ on:
       - 'dependabot/**'
     types: 
       - completed
-  pull_request:
 
 jobs:
   auto-merge:
