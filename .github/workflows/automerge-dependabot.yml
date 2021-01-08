@@ -19,5 +19,6 @@ jobs:
       - name: Automerge Dependabot
         uses: pascalgn/automerge-action@v0.12.0
         env:
+          MERGE_LABELS: "!WIP"
           MERGE_METHOD: "squash"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
