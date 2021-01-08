@@ -1,12 +1,13 @@
 name: Automerge Dependabot
 
 on:
-  check_suite:
-    types:
-      - completed
   workflow_run:
-    workflows: ["Tests"]
-    branches: [dependabot]
+    workflows:
+      - Tests
+    branches: 
+      - 'dependabot/**'
+    types: 
+      - completed
   pull_request:
 
 jobs:
