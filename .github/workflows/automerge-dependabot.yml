@@ -1,0 +1,21 @@
+name: Automerge Dependabot
+
+on:
+  check_suite:
+    types:
+      - completed
+  pull_request:
+
+jobs:
+  auto-merge:
+
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+
+    steps:
+      - name: Automerge Dependabot
+        uses: pascalgn/automerge-action@v0.12.0
+        if: steps.waitforstatuschecks.outputs.status == 'success'
+        env:
+          MERGE_METHOD: "squash"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
