@@ -17,4 +17,4 @@ pyzmq==20.0.0
 scipy==1.5.4
 six==1.15.0
 xarray==0.16.2
-jupyter-client==6.1.7
+jupyter-client==6.2.0
